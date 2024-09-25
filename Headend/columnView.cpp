@@ -1,19 +1,9 @@
-// void MainWindow::onColumnItemSelected(const QModelIndex &index) {
-//     QStandardItemModel *model = qobject_cast<QStandardItemModel *>(ui->columnView->model());
-//
-//     if (model) {
-//         QString selectedItemText = model->itemFromIndex(index)->text();
-//         qInfo() << "Selected item:" << selectedItemText;
-//     }
-// }
-
 void MainWindow::onColumnItemSelected(const QModelIndex &index) {
     QStandardItemModel *model = qobject_cast<QStandardItemModel *>(ui->columnView->model());
 
     if (model) {
         QStandardItem *selectedItem = model->itemFromIndex(index);
 
-        // Check if this is the last column by looking at the column index
         int column = index.column();
 
         if (selectedItem && column == model->columnCount() - 1) {
