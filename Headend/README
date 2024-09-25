@@ -1,0 +1,8 @@
+/* Head End Qt6 C++ */
+
+/* include either as a file.cpp/h or modify the variables in mainwindow.cpp */
+
+username = "";
+password = "";
+country = "";
+postalcode = "";
